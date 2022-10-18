@@ -103,6 +103,8 @@ class RandomProxy(object):
         log.debug('Using proxy <%s>, %d proxies left' % (
                 proxy_address, len(self.proxies)))
 
+        return request
+
     def process_exception(self, request, exception, spider):
         if 'proxy' not in request.meta:
             return
